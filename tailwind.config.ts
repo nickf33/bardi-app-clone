@@ -11,7 +11,7 @@ const config: Config = {
       desktop_xl: { min: "1280px" },
       // anything over 1280px
       desktop: { max: "1080px" },
-      // anything under 1024px
+      // anything under 1080px
       laptop: { max: "900px" },
       // specific use case - form elements
       tablet: { max: "767px" },
@@ -22,11 +22,15 @@ const config: Config = {
       // Anything under 465px
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontSize: {
+        "2xs": "0.6rem",
       },
+      colors: {
+        cyan: { logo: "#00C2C8" },
+      },
+    },
+    maxWidth: {
+      custom: "1080px",
     },
   },
   plugins: [],

@@ -102,7 +102,7 @@ video {
 
 html {
   scroll-behavior: smooth;
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(14px, 2.5vw, 22px);
   -webkit-font-smoothing: antialised;
   overflow-x: hidden;
 }
@@ -123,7 +123,7 @@ section {
 
 body {
   line-height: 1;
-  background-color: var(--dark-color);
+  background-color: #ffffff;
   color: var(--light-color);
   overscroll-behavior: none;
   line-height: 1.4;

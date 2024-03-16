@@ -1,11 +1,37 @@
+"use client";
+
 import Image from "next/image";
-import bgImg from "@/app/assets/images/main.jpg";
+import bgImg from "@/app/assets/images/landing/main.jpg";
+import { GoArrowDown } from "react-icons/go";
+import { motion } from "framer-motion";
+import Button from "../ui/Button";
+
+const landingData = {
+  title: "One simple ecosystem for smart living solutions.",
+  subTitle: "Always in copntrol",
+  buttonText: "Explore products",
+};
 
 const TextWrap = () => {
   return (
     <>
-      <div className="w-[90%] h-20 mx-auto border">
-        <h1>Title text should appear here!</h1>
+      <div className="flex w-[90%] max-w-custom h-28 mx-auto mb-16 justify-between desktop:flex-col-reverse">
+        <div className="flex flex-col items-start justify-between h-full py-2">
+          <p className="text-white text-sm font-light desktop:text-sm desktop:my-4">
+            Always in Control
+          </p>
+          <Button>Explore Products</Button>
+        </div>
+        <div className="w-[32rem] desktop:w-full">
+          <h1 className="text-[2.6rem] font-semibold text-white">
+            One simple ecosystem for smart living solutions.
+          </h1>
+        </div>
+        <div className="flex justify-end items-end desktop:hidden">
+          <motion.div className="px-2 py-4 h-12 border rounded-full text-white">
+            <GoArrowDown />
+          </motion.div>
+        </div>
       </div>
     </>
   );
@@ -14,7 +40,7 @@ const TextWrap = () => {
 const LandingWrap = () => {
   return (
     <>
-      <div className="border border-red-500 h-full w-full">
+      <div className="h-screen w-full flex justify-end items-end">
         <TextWrap />
         <Image
           src={bgImg}
@@ -23,7 +49,7 @@ const LandingWrap = () => {
           height={2000}
           className="absolute top-0 left-0 h-screen w-full object-cover z-[-2]"
         />
-        <div className="absolute top-0 left-0 h-screen w-full bg-gray-800 opacity-30 z-[-1]"></div>
+        <div className="absolute top-0 left-0 h-screen w-full bg-black opacity-40 z-[-1]"></div>
       </div>
     </>
   );
