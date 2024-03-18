@@ -194,7 +194,7 @@ select:-webkit-autofill:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #888888;
   border-radius: 6px;
 }
 
