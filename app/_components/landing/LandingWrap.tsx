@@ -46,6 +46,7 @@ const LandingWrap = () => {
           alt="main image of a front room with smart devices"
           width={2000}
           height={2000}
+          priority
           className="absolute bottom-0 left-0 h-screen w-full object-cover object-left-bottom z-[-2]"
         />
         <div className="absolute top-0 left-0 h-screen w-full bg-black opacity-50 z-[-1]"></div>

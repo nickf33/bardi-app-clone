@@ -99,7 +99,7 @@ const SwiperPagination = () => {
             className="h-[5px] rounded-full"
             initial={{ width: "5px", backgroundColor: "#888" }}
             animate={{
-              width: activeIndex === index ? "3rem" : "5px",
+              width: activeIndex === index ? "2rem" : "5px",
               backgroundColor: activeIndex === index ? "#000" : "#888",
             }}
             transition={{ duration: 0.3 }}
