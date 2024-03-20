@@ -3,7 +3,6 @@
 import Image from "next/image";
 import bgImg from "@/app/assets/images/landing/main.jpg";
 import { GoArrowDown } from "react-icons/go";
-import { motion } from "framer-motion";
 import Button from "../ui/Button";
 
 const landingData = {
@@ -28,9 +27,9 @@ const TextWrap = () => {
           </h1>
         </div>
         <div className="flex justify-end items-end desktop:hidden">
-          <motion.div className="px-2 py-4 h-12 border rounded-full text-white">
+          <div className="px-2 py-4 h-12 border rounded-full text-white transition duration-300 hover:scale-105 active:scale-90">
             <GoArrowDown />
-          </motion.div>
+          </div>
         </div>
       </div>
     </>
@@ -47,9 +46,10 @@ const LandingWrap = () => {
           alt="main image of a front room with smart devices"
           width={2000}
           height={2000}
-          className="absolute top-0 left-0 h-screen w-full object-cover z-[-2]"
+          priority
+          className="absolute bottom-0 left-0 h-screen w-full object-cover object-left-bottom z-[-2]"
         />
-        <div className="absolute top-0 left-0 h-screen w-full bg-black opacity-40 z-[-1]"></div>
+        <div className="absolute top-0 left-0 h-screen w-full bg-black opacity-50 z-[-1]"></div>
       </div>
     </>
   );

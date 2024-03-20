@@ -9,7 +9,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`flex justify-center items-center mr-4 px-6 py-3 rounded-full text-xs font-semibold transition duration-300 hover:shadow hover:scale-[1.02] ${
+      className={`flex justify-center items-center mr-4 px-6 py-3 rounded-full text-xs font-semibold transition duration-300 hover:shadow hover:scale-[1.02] active:scale-90 ${
         dark ? "bg-black text-white" : "bg-white text-black"
       } ${border ? "border-2 border-black" : ""}`}
     >

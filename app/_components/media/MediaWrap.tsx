@@ -95,6 +95,8 @@ const MediaWrap = () => {
   return (
     <>
       <div className="w-[90%] mx-auto max-w-custom">
+        <h2 className="mt-28 mb-12 text-4xl font-bold">Bardi in Media.</h2>
+
         {posts.map((post, index) => (
           <div key={index} className="">
             <PostWrap
