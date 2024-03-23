@@ -14,7 +14,7 @@ const MainProduct = ({ productData }: { productData: Product }) => {
 
   return (
     <>
-      <div className="flex flex-col justify-between w-full h-full rounded-xl text-center p-8 border shadow-xls overflow-hidden">
+      <div className="flex flex-col justify-between w-full h-full rounded-xl text-center p-8 border shadow-xls overflow-hidden  transiton duration-300 hover:scale-105 hover:shadow-xl">
         <div className="">{title}</div>
         <div className="flex w-full justify-between">
           <button className="text-2xs text-white bg-cyan-300 rounded-full py-1 px-3 mx-auto my-4 transition duration-300 hover:shadow hover:scale-[1.02]">

@@ -1,15 +1,18 @@
 import ImageGrid from "./ImageGrid";
 import ProcessItems from "./ProcessItems";
+import ScrollWords from "../ui/ScrollWords";
+import ScrollCharacters from "../ui/ScrollCharacters";
+import ScrollText from "../ui/ScrollText";
 
 const ProcessWrap = () => {
   return (
     <>
-      <div className="w-full py-16">
-        <div className="w-[90%] max-w-custom mx-auto">
-          <h2 className="text-[2.2rem] font-semibold max-w-[30rem]">
-            Build a smart home to uplift your everyday living and meaningful
-            moments.
-          </h2>
+      <div className="relative w-full mb-24">
+        <div className=" relative w-[90%] max-w-custom mx-auto">
+          <ScrollText
+            text="Build a smart home to uplift your everyday living and meaningful moments."
+            padding="pt-32 relative"
+          />
           <ImageGrid />
           <ProcessItems />
         </div>

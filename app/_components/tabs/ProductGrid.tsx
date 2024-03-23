@@ -39,7 +39,7 @@ const ProductGrid = ({ productsData }: { productsData: Product[] }) => {
         {productsData.map((product, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col justify-between items-center border rounded-xl text-xs text-center p-4 overflow-hidden h-48"
+            className="relative flex flex-col justify-between items-center border rounded-xl text-xs text-center p-4 overflow-hidden h-48 transiton duration-300 hover:scale-105 hover:shadow-xl"
             variants={item}
           >
             <p className=""> {product.title}</p>

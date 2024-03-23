@@ -3,7 +3,7 @@ import { FaUser } from "react-icons/fa";
 const User = () => {
   return (
     <>
-      <div className="mx-4">
+      <div className="">
         <FaUser />
       </div>
     </>

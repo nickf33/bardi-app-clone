@@ -61,7 +61,7 @@ const TabsAPI = () => {
 
   return (
     <>
-      <div className="w-full mb-20">
+      <div id="products" className="w-full mb-20">
         <div className="w-[90%] max-w-custom mx-auto">
           <h2 className="text-[2.2rem] font-semibold text-center my-8">
             Start your system.
@@ -74,9 +74,9 @@ const TabsAPI = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.2 }}
               className="grid grid-cols-2 h-96 gap-5 my-8 mobile_xl:grid-cols-1 mobile_xl:h-auto"
             >

@@ -1,25 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Logo from "./Logo";
+import NavItems from "./NavItems";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useState, useEffect, use } from "react";
 
-import NavDesktop from "./NavDesktop";
-import NavMobile from "./NavMobile";
-
-const navLinks = [
-  { title: "Products", url: "#products" },
-  { title: "Solutions", url: "#solutions" },
-  { title: "Support", url: "#support" },
-  { title: "Contact Us", url: "#contact" },
-];
-
-export default function NavigationWrap() {
-  const [isMobile, setIsMobile] = useState(false);
+const NavWrap = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [belowFold, setBelowFold] = useState(false);
-  const switchWidth = 767;
+
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -56,20 +46,9 @@ export default function NavigationWrap() {
     }
   });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= switchWidth);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [switchWidth]);
-
   return (
     <>
-      <motion.nav
+      <motion.div
         variants={{
           visible: { y: 0 },
           hidden: { y: -100 },
@@ -83,14 +62,14 @@ export default function NavigationWrap() {
         <div
           className={`w-[90%] max-w-custom h-full mx-auto flex justify-between items-center`}
         >
-          <Logo text="BARDI" />
-          {isMobile ? (
-            <NavMobile navLinks={navLinks} belowFold={belowFold} />
-          ) : (
-            <NavDesktop navLinks={navLinks} belowFold={belowFold} />
-          )}
+          <Logo text={"BARDI"} />
+          <div className="flex justify-between">
+            <NavItems position={belowFold} />
+          </div>
         </div>
-      </motion.nav>
+      </motion.div>
     </>
   );
-}
+};
+
+export default NavWrap;
