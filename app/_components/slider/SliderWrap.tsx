@@ -1,15 +1,16 @@
 "use client";
+
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import reviewImg from "../../assets/images/reviews/reviewImg.jpg";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image, { StaticImageData } from "next/image";
-import { IoMdArrowForward, IoMdArrowBack } from "react-icons/io";
-import { useState } from "react";
-import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+import SwiperButtons from "./SwiperButtons";
+import SwiperPagination from "./SwiperPagination";
 
 interface ImageData {
   url: string | StaticImageData;
@@ -58,57 +59,6 @@ const reviews = [
     },
   },
 ];
-
-const SwiperButtons = () => {
-  const swiper = useSwiper();
-  return (
-    <>
-      <div className="flex absolute gap-5 top-1 right-1 justify-center items-center laptop:my-8 laptop:relative laptop:top-auto laptop:right-auto">
-        <button
-          className="grid place-content-center h-12 w-8 border border-gray-700 bg-[#D8F3F4] rounded-full z-20 text-gray-700 transition duration-300 hover:scale-105 active:scale-90"
-          onClick={() => swiper.slidePrev()}
-        >
-          <IoMdArrowBack />
-        </button>
-
-        <button
-          className="grid place-content-center h-12 w-8 border border-gray-700 bg-[#D8F3F4] rounded-full z-20 text-gray-700 transition duration-300 hover:scale-105 active:scale-90"
-          onClick={() => swiper.slideNext()}
-        >
-          <IoMdArrowForward />
-        </button>
-      </div>
-    </>
-  );
-};
-
-const SwiperPagination = () => {
-  const swiper = useSwiper();
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  swiper.on("slideChange", () => {
-    setActiveIndex(swiper.realIndex);
-  });
-
-  return (
-    <>
-      <div className="relative flex gap-2 mt-12 laptop:justify-center">
-        {reviews.map((_, index) => (
-          <motion.div
-            key={index}
-            className="h-[5px] rounded-full"
-            initial={{ width: "5px", backgroundColor: "#888" }}
-            animate={{
-              width: activeIndex === index ? "2rem" : "5px",
-              backgroundColor: activeIndex === index ? "#000" : "#888",
-            }}
-            transition={{ duration: 0.3 }}
-          ></motion.div>
-        ))}
-      </div>
-    </>
-  );
-};
 
 const SliderWrap = () => {
   return (
@@ -162,7 +112,7 @@ const SliderWrap = () => {
           <div className="grid grid-cols-10">
             <div className="col-span-3 laptop:col-span-0"></div>
             <div className="col-span-5 laptop:col-span-10">
-              <SwiperPagination />
+              <SwiperPagination reviews={reviews} />
             </div>
             <div className="col-span-2 laptop:col-span-0"></div>
           </div>
