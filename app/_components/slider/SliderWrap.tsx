@@ -102,7 +102,7 @@ const SliderWrap = () => {
                 </div>
                 <div className="w-full h-full col-span-5 laptop:col-span-10">
                   <p className="text-xl font-medium laptop:text-center laptop:w-4/5 laptop:mx-auto">
-                    &quot;{review.review}&quot;
+                    {review.review}
                   </p>
                 </div>
                 <div className="w-full h-full col-span-2"></div>
