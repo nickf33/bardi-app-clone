@@ -19,7 +19,7 @@ const ScrollText = ({ text, padding }: { text: string; padding: string }) => {
   );
 
   return (
-    <div ref={wrapper} className={`relative border ${padding}`}>
+    <div ref={wrapper} className={`relative ${padding}`}>
       <motion.h2
         className="text-[2.2rem] font-semibold max-w-[30rem]"
         style={{ opacity: scrollYProgress, y: translateY }}

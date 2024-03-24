@@ -9,9 +9,9 @@ const ProcessWrap = () => {
     <>
       <div className="relative w-full mb-24">
         <div className=" relative w-[90%] max-w-custom mx-auto">
-          <ScrollText
+          <ScrollCharacters
             text="Build a smart home to uplift your everyday living and meaningful moments."
-            padding="pt-32 relative"
+            padding="pt-32"
           />
           <ImageGrid />
           <ProcessItems />

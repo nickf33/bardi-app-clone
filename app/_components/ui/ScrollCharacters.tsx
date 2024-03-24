@@ -1,7 +1,7 @@
 "use client";
 
 import { useScroll, motion, MotionValue, useTransform } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 const ScrollCharacters = ({
   text,
@@ -15,16 +15,17 @@ const ScrollCharacters = ({
     target: wrapper,
     offset: ["start 0.6", "start start"],
   });
+
   let words: string[] | undefined;
   if (text) {
     words = text.split(" ");
   } else {
-    words = []; // Provide a default empty array when text is null or undefined
+    words = [];
   }
 
   return (
-    <div ref={wrapper} className={`relative flex flex-wrap border ${padding}`}>
-      <motion.h2 className="flex flex-wrap text-[2.2rem] leading-tight font-semibold max-w-[30rem]">
+    <div ref={wrapper} className={`relative flex flex-wrap ${padding}`}>
+      <motion.h2 className="relative flex flex-wrap text-[2.2rem] leading-tight font-semibold max-w-[30rem]">
         {(words || []).map((word, i) => {
           const start = i / (words?.length || 1);
           const end = start + 1 / (words?.length || 1);

@@ -1,3 +1,5 @@
+import AnimateIn from "../ui/AnimateIn";
+
 const processData = [
   {
     number: "01",
@@ -19,19 +21,21 @@ const processData = [
 const ProcessItems = () => {
   return (
     <>
-      <div className="grid grid-cols-6 gap-10">
+      <div className="relative grid grid-cols-3 gap-10">
         {processData.map((item, index) => (
-          <div
-            key={index}
-            className="col-span-2 border-t-2 h-full text-xs py-8 mobile_xl:col-span-6 mobile_xl:text-base"
-          >
-            <p className="before:content-['0'] font-semibold mb-2">
-              {index + 1} - {item.title}
-            </p>
-            <p className="text-2xs mobile_xl:text-base mobile_xl:w-4/5">
-              {item.text}
-            </p>
-          </div>
+          <AnimateIn delay={0.3 * index}>
+            <div
+              key={index}
+              className="col-span-1 border-t-2 h-full text-xs py-8 mobile_xl:col-span-6 mobile_xl:text-base"
+            >
+              <p className="before:content-['0'] font-semibold mb-2">
+                {index + 1} - {item.title}
+              </p>
+              <p className="text-2xs mobile_xl:text-base mobile_xl:w-4/5">
+                {item.text}
+              </p>
+            </div>
+          </AnimateIn>
         ))}
       </div>
     </>
