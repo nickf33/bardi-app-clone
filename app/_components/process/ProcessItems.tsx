@@ -23,7 +23,7 @@ const ProcessItems = () => {
     <>
       <div className="relative grid grid-cols-3 gap-10">
         {processData.map((item, index) => (
-          <AnimateIn delay={0.1 * index}>
+          <AnimateIn key={index} delay={0.1 * index}>
             <div
               key={index + item.text}
               className="col-span-1 border-t-2 h-full text-xs py-8 mobile_xl:col-span-6 mobile_xl:text-base"

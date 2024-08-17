@@ -54,7 +54,7 @@ export default function NavigationWrap() {
     } else {
       setBelowFold(false);
     }
-  });
+  }, [scrollY]);
 
   useEffect(() => {
     const handleResize = () => {
