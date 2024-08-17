@@ -26,7 +26,7 @@ const download = {
 const Address = () => {
   return (
     <>
-      <div className="w-[90%] h-full ml-auto border">
+      <div className="w-[90%] h-full ml-auto">
         <Logo text="BARDI" footer={true} />
         <p className="text-xl font-semibold mt-4">{title}</p>
         <div className="text-2xs my-12 text-gray-500 font-medium">

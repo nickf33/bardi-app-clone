@@ -11,7 +11,7 @@ const ImageGrid = () => {
       y: 0,
       opacity: 1,
       transition: {
-        stiffness: 100,
+        stiffness: 1000,
         damping: 10,
       },
     },

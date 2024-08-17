@@ -14,7 +14,7 @@ const landingData = {
 const TextWrap = () => {
   return (
     <>
-      <div className="flex w-[90%] max-w-custom h-28 mx-auto mb-16 justify-between desktop:flex-col-reverse">
+      <div className="relative flex w-[90%] max-w-custom h-28 mx-auto mb-16 justify-between desktop:flex-col-reverse">
         <div className="flex flex-col items-start justify-between h-full py-2">
           <p className="text-white text-sm font-light desktop:text-sm desktop:my-4">
             Always in Control

@@ -1,3 +1,5 @@
+import EmailCollectionForm from "./EmailCollectionForm";
+
 const callToAction = {
   title: "Never Miss an Update",
   subTitle: "Be the first to hear about new offers from Bardi",
@@ -9,6 +11,7 @@ const Contact = () => {
       <div className="">
         <p className="text-xs font-bold">{callToAction.title}</p>
         <p className="text-2xs">{callToAction.subTitle}</p>
+        <EmailCollectionForm />
       </div>
     </>
   );

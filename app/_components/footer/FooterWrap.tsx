@@ -7,7 +7,7 @@ const FooterWrap = () => {
   return (
     <>
       <div id="contact" className="w-full py-12 bg-gray-100">
-        <div className="grid grid-cols-2 w-[90%] max-w-custom mx-auto border">
+        <div className="grid grid-cols-2 w-[90%] max-w-custom mx-auto">
           <Address />
           <div className="flex flex-col justify-between">
             <Contact />

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import TabsNav from "./TabsNav";
 import MainProduct from "./MainProduct";
 import ProductGrid from "./ProductGrid";
+import AnimateIn from "../ui/AnimateIn";
 
 interface Product {
   id: number;

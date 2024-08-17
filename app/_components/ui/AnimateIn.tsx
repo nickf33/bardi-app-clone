@@ -16,7 +16,6 @@ const Animate = ({
       transition: {
         delay: delay,
         stiffness: 1000,
-        damping: 10,
       },
     },
     hidden: {
@@ -30,7 +29,7 @@ const Animate = ({
       initial="hidden"
       whileInView="visible"
       variants={animate}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
       className="relative w-full"
     >
       {children}
